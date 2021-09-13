@@ -20,9 +20,9 @@ function preload(){
 
 function setup(){
   
-  createCanvas(400,600);
+  createCanvas(windowWidth,windowHeight);
 // movendo o plano de fundo
-caminho=createSprite(200,200);
+caminho=createSprite(width-0.01,200);
 caminho.addImage(imgCaminho);
 caminho.velocityY = 4;
 
@@ -88,7 +88,7 @@ function draw() {
 
 function criarDinheiro() {
   if (World.frameCount % 200 == 0) {
-  var dinheiro = createSprite(Math.round(random(50, 350),40, 10, 10));
+  var dinheiro = createSprite(Math.round(random(50, width-50),40, 10, 10));
   dinheiro.addImage(imgDinheiro);
   dinheiro.scale=0.12;
   dinheiro.velocityY = 3;
@@ -99,7 +99,7 @@ function criarDinheiro() {
 
 function criarDiamantes() {
   if (World.frameCount % 320 == 0) {
-  var diamantes = createSprite(Math.round(random(50, 350),40, 10, 10));
+  var diamantes = createSprite(Math.round(random(50, width-50),40, 10, 10));
   diamantes.addImage(imgDiamantes);
   diamantes.scale=0.03;
   diamantes.velocityY = 3;
@@ -110,7 +110,7 @@ function criarDiamantes() {
 
 function criarJoias() {
   if (World.frameCount % 410 == 0) {
-  var joias = createSprite(Math.round(random(50, 350),40, 10, 10));
+  var joias = createSprite(Math.round(random(50, windth-50),40, 10, 10));
   joias.addImage(imgJoias);
   joias.scale=0.13;
   joias.velocityY = 3;
@@ -121,7 +121,7 @@ function criarJoias() {
 
 function criarEspadas(){
   if (World.frameCount % 530 == 0) {
-  var espada = createSprite(Math.round(random(50, 350),40, 10, 10));
+  var espada = createSprite(Math.round(random(50, width-50),40, 10, 10));
   espada.addImage(imgEspada);
   espada.scale=0.1;
   espada.velocityY = 3;
